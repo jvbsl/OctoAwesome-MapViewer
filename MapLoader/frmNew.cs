@@ -19,6 +19,8 @@ namespace MapLoader
         {
             InitializeComponent();
 
+
+
             cmbMapGenerator.Items.AddRange(OctoAwesome.Runtime.MapGeneratorManager.GetMapGenerators().ToArray());
 
         }

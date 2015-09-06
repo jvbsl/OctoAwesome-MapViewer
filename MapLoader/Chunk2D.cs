@@ -13,7 +13,7 @@ namespace MapLoader
         private int[] bitmapData;
 		public Chunk2D (IChunk[] chunks)
 		{
-			IBlock[] blocks = new IBlock[Chunk.CHUNKSIZE_X*Chunk.CHUNKSIZE_Y];
+			ushort[] blocks = new ushort[Chunk.CHUNKSIZE_X*Chunk.CHUNKSIZE_Y];
             float[] heights = new float[Chunk.CHUNKSIZE_X * Chunk.CHUNKSIZE_Y];
             int maxHeight = Chunk.CHUNKSIZE_Z*chunks.Length;
 			int index = 0;
@@ -24,7 +24,7 @@ namespace MapLoader
 					{
 						IChunk current = chunks [i];
 						for (int z = Chunk.CHUNKSIZE_Z - 1; z >= 0; z--) {
-							if ((blocks [index] = current.GetBlock (x, y, z)) != null) {
+							if ((blocks [index] = current.GetBlock (x, y, z)) != 0) {
                                 float percent = (float)(i * Chunk.CHUNKSIZE_Z + z) / maxHeight;
                                 heights[index] = percent - 0.5f;
 								found = true;
@@ -51,7 +51,7 @@ namespace MapLoader
                 return (int)0xFF000000 | (int)red << 16 | (int)green << 8 | (int)blue;
             }
         }
-		private void CreateBitmap(IBlock[] blocks,float[] heights)
+		private void CreateBitmap(ushort[] blocks,float[] heights)
 		{
 			/*if (bitmap == null) {
 				bitmap = new Bitmap (Chunk.CHUNKSIZE_X, Chunk.CHUNKSIZE_Y);
@@ -84,12 +84,12 @@ namespace MapLoader
                 {
                     for (int x = 0; x < Chunk.CHUNKSIZE_X; x++, index++)
                     {
-                        IBlock block = blocks[index];
-                        if (block == null)
+                        ushort block = blocks[index];
+                        if (block == 0)
                             continue;
 
                         int col;
-                        if (TypeManager.Instance.ColorMapping.TryGetValue(block.GetType(), out col))
+                        if (TypeManager.Instance.ColorMapping.TryGetValue(block, out col))
                         {
                             bitmapData[index] = CorrectColor(col, heights[index]);
                         }

@@ -1,28 +1,22 @@
-﻿<Properties StartupItem="MapLoader/MapLoader.csproj">
+﻿<Properties StartupItem="MapLoader/MapLoader.csproj" GitUserInfo="UsingMD">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MapLoader/Chunk2D.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MapLoader/frmNew.cs">
     <Files>
-      <File FileName="MapLoader/Program.cs" Line="11" Column="1" />
-      <File FileName="MapLoader/MainWindow.cs" Line="21" Column="5" />
-      <File FileName="MapLoader/MainWindow.Designer.cs" Line="51" Column="25" />
-      <File FileName="MapLoader/MapRenderer.cs" Line="50" Column="1" />
-      <File FileName="MapLoader/TypeManager.cs" Line="24" Column="1" />
-      <File FileName="MapLoader/Chunk2D.cs" Line="42" Column="37" />
+      <File FileName="MapLoader/Program.cs" Line="1" Column="1" />
+      <File FileName="MapLoader/MapRenderer.cs" Line="1" Column="1" />
+      <File FileName="MapLoader/TypeManager.cs" Line="1" Column="1" />
+      <File FileName="MapLoader/Chunk2D.cs" Line="1" Column="1" />
+      <File FileName="MapLoader/OrientationPlanetResManager.cs" Line="1" Column="1" />
+      <File FileName="MapLoader/frmNew.cs" Line="24" Column="1" />
+      <File FileName="../../../Downloads/octoawesome-master/OctoAwesome/OctoAwesome.Runtime/MapGeneratorManager.cs" Line="1" Column="1" />
+      <File FileName="../../../Downloads/octoawesome-master/OctoAwesome/OctoAwesome.Runtime/ExtensionManager.cs" Line="66" Column="18" />
+      <File FileName="MapLoader/frmMain.Designer.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="MapLoader" expanded="True">
-            <Node name="MapLoader" expanded="True" selected="True">
-              <Node name="References" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/home/julian/Projects/jvbsl/OctoAwesome-MapViewer.git/MapLoader/frmNew.cs" line="24" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

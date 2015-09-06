@@ -211,8 +211,8 @@ namespace MapLoader
                     int index = normalized.Y * Map.Planet.Size.X + normalized.X;
                     if (Map.Chunks[index] != null)
                         continue;
-
-                    IChunk[] tempChunks = Map.Generator.GenerateChunk(Map.Planet, normalized);
+					
+					IChunk[] tempChunks = Map.Generator.GenerateChunk (BlockDefinitionManager.GetBlockDefinitions(), Map.Planet, normalized);
                     Map.Chunks[index] = new Chunk2D(tempChunks);
                     if (!IsHandleCreated)
                         return;

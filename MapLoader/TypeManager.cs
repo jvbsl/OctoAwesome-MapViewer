@@ -18,33 +18,26 @@ namespace MapLoader
 		public TypeManager ()
 		{
 			var definitions = BlockDefinitionManager.GetBlockDefinitions();
-            TypeMapping = new Dictionary<Type, int>();
-            DefinitionMapping = new Dictionary<Type, IBlockDefinition>();
-            ColorMapping = new Dictionary<Type, int>();
-			int definitionIndex = 0;
-            
+            ColorMapping = new Dictionary<ushort, int>();
+			ushort definitionIndex = 1;
+			IPlanetResourceManager res = new OrientationPlanetResManager ();
+
 			foreach (var definition in definitions)
 			{
-                IBlock block = definition.GetInstance(OrientationFlags.None);
-				int textureCount = definition.Textures.Count();
-				TypeMapping.Add(definition.GetBlockType(), definitionIndex);
-                int topIndex = definition.GetTopTextureIndex(block);//TODO: orientation
+				int topIndex = definition.GetTopTextureIndex(res,(int)OrientationFlags.None,0,0);//TODO: orientation
                 Bitmap bmp = definition.Textures.ElementAt(topIndex);
                 BitmapData readBmp = bmp.LockBits(new Rectangle(0, 0, 1, 1), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
                 unsafe
                 {
                     int* firstPixel = (int*)readBmp.Scan0;
 
-                    ColorMapping.Add(definition.GetBlockType(),*firstPixel);
+					ColorMapping.Add(definitionIndex,*firstPixel);
                 }
                 bmp.UnlockBits(readBmp);
-				DefinitionMapping.Add(definition.GetBlockType(), definition);
-				definitionIndex += textureCount;
+				definitionIndex++;
 			}
 		}
-		public Dictionary<Type, IBlockDefinition> DefinitionMapping{ get; private set; }
-		public Dictionary<Type, int> TypeMapping{ get; private set; }
-        public Dictionary<Type, int> ColorMapping { get; private set; }
+		public Dictionary<ushort, int> ColorMapping { get; private set; }
 		private static TypeManager instance;
         private static object locking = new object();
 		public static TypeManager Instance{

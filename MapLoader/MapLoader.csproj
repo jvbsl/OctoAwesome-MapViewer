@@ -32,22 +32,15 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MonoGame.Framework, Version=3.3.0.2153, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\OctoAwesome\bin\Debug\MonoGame.Framework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows" />
-    <Reference Include="OctoAwesome">
-      <HintPath>..\..\OctoAwesome\bin\Debug\OctoAwesome.dll</HintPath>
-    </Reference>
-    <Reference Include="OctoAwesome.Runtime">
-      <HintPath>..\..\OctoAwesome\bin\Debug\OctoAwesome.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
+    <Reference Include="MonoGame.Framework">
+      <HintPath>bin\Debug\MonoGame.Framework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="frmMain.cs">
@@ -74,6 +67,7 @@
     <Compile Include="Chunk2D.cs" />
     <Compile Include="TypeManager.cs" />
     <Compile Include="BlockingQueue.cs" />
+    <Compile Include="OrientationPlanetResManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmMain.resx">
@@ -87,4 +81,14 @@
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Downloads\octoawesome-master\OctoAwesome\OctoAwesome\OctoAwesome.csproj">
+      <Project>{93601DB8-F134-418E-8B35-11E30CFEC31C}</Project>
+      <Name>OctoAwesome</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Downloads\octoawesome-master\OctoAwesome\OctoAwesome.Runtime\OctoAwesome.Runtime.csproj">
+      <Project>{31D774C6-E5D9-40B7-8D63-942E28FE1D94}</Project>
+      <Name>OctoAwesome.Runtime</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
