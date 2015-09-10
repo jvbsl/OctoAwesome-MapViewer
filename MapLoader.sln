@@ -1,13 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
 VisualStudioVersion = 12.0.40418.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapLoader", "MapLoader\MapLoader.csproj", "{15980092-24EC-41EC-BD7B-EFD4EF6C4276}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OctoAwesome", "..\..\..\Downloads\octoawesome-master\OctoAwesome\OctoAwesome\OctoAwesome.csproj", "{93601DB8-F134-418E-8B35-11E30CFEC31C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OctoAwesome.Runtime", "..\..\..\Downloads\octoawesome-master\OctoAwesome\OctoAwesome.Runtime\OctoAwesome.Runtime.csproj", "{31D774C6-E5D9-40B7-8D63-942E28FE1D94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +15,6 @@ Global
 		{15980092-24EC-41EC-BD7B-EFD4EF6C4276}.Debug|x86.Build.0 = Debug|x86
 		{15980092-24EC-41EC-BD7B-EFD4EF6C4276}.Release|x86.ActiveCfg = Release|x86
 		{15980092-24EC-41EC-BD7B-EFD4EF6C4276}.Release|x86.Build.0 = Release|x86
-		{31D774C6-E5D9-40B7-8D63-942E28FE1D94}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{31D774C6-E5D9-40B7-8D63-942E28FE1D94}.Debug|x86.Build.0 = Debug|Any CPU
-		{31D774C6-E5D9-40B7-8D63-942E28FE1D94}.Release|x86.ActiveCfg = Release|Any CPU
-		{31D774C6-E5D9-40B7-8D63-942E28FE1D94}.Release|x86.Build.0 = Release|Any CPU
-		{93601DB8-F134-418E-8B35-11E30CFEC31C}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{93601DB8-F134-418E-8B35-11E30CFEC31C}.Debug|x86.Build.0 = Debug|Any CPU
-		{93601DB8-F134-418E-8B35-11E30CFEC31C}.Release|x86.ActiveCfg = Release|Any CPU
-		{93601DB8-F134-418E-8B35-11E30CFEC31C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

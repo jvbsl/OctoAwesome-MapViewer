@@ -32,6 +32,18 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="OctoAwesome, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\OctoAwesome.dll</HintPath>
+    </Reference>
+    <Reference Include="OctoAwesome.Basics, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\OctoAwesome.Basics.dll</HintPath>
+    </Reference>
+    <Reference Include="OctoAwesome.Runtime, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\OctoAwesome.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />
@@ -80,15 +92,26 @@
       <DependentUpon>MapRenderer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Downloads\octoawesome-master\OctoAwesome\OctoAwesome\OctoAwesome.csproj">
-      <Project>{93601DB8-F134-418E-8B35-11E30CFEC31C}</Project>
-      <Name>OctoAwesome</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Downloads\octoawesome-master\OctoAwesome\OctoAwesome.Runtime\OctoAwesome.Runtime.csproj">
-      <Project>{31D774C6-E5D9-40B7-8D63-942E28FE1D94}</Project>
-      <Name>OctoAwesome.Runtime</Name>
-    </ProjectReference>
+    <Content Include="References\OctoAwesome.Basics.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="References\OctoAwesome.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="References\OctoAwesome.Runtime.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="References\OpenTK.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="References\Tao.Sdl.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
 </Project>
